@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh -q stack@thor.perform.illinois.edu "ssh -q -F /home/stack/.quickstart/ssh.config.ansible undercloud 'cat overcloudrc | grep OS_PASSWORD'"
