@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Access the undercloud as ssh stack user
+alias undercloud="ssh -F ~/.quickstart/ssh.config.ansible undercloud"

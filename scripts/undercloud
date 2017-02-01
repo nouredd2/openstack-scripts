@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Setting up ssh to undercloud virtual machine..."
+ssh -q -t stack@thor.perform.illinois.edu ssh -q -t -F /home/stack/.quickstart/ssh.config.ansible undercloud
