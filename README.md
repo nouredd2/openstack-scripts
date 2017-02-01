@@ -2,8 +2,6 @@
 A container for my openstack scripts and config files
 
 # Project tree
-
-.
  * [aliases](./aliases)
    * [set_kvm_conf](./aliases/set_kvm_conf)
    * [stack_aliases](./aliases/stack_aliases)
