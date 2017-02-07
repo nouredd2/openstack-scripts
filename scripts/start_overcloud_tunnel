@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Setting up ssh tunnel to the overcloud...."
+echo "ssh -L 1080:localhost:1080 stack@thor.perform.illinois.edu 'ssh -D 1080 -F /home/stack/.quickstart/ssh.config.ansible undercloud'"
+ssh -L 1080:localhost:1080 stack@thor.perform.illinois.edu 'ssh -D 1080 -F /home/stack/.quickstart/ssh.config.ansible undercloud'
