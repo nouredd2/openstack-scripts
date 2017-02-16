@@ -1,0 +1,12 @@
+#!/bin/bash
+
+SSH=autossh
+if ! `type -p $SSH &> /dev/null`; then 
+	SSH=ssh
+else
+	SSH=autossh -M 0
+fi
+
+echo "Using SSH = $SSH"
+echo "Setting up ssh to overcloud controller 0 virtual machine..."
+ssh -q -t stack@thor.perform.illinois.edu ssh -q -t -F /home/stack/.quickstart/ssh.config.ansible overcloud-controller-1
