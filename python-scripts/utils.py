@@ -59,4 +59,4 @@ def print_completion_time (start_time, elapsed = -1.0):
     if (elapsed == -1.0):
         elapsed = timeit.default_timer() - start_time
 
-    print ('Execution completed in %d seconds' % elapsed)
+    print ('Execution completed in %f seconds' % elapsed)

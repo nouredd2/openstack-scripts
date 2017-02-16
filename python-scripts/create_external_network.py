@@ -36,13 +36,13 @@ for k, v in credentials.items():
 
 if verbose:
     elapsed = timeit.default_timer() - start_time
-    print ("[@ %d] Authenticating to neutron client" % elapsed)
+    print ("[@ %f] Authenticating to neutron client" % elapsed)
 
 neutron = client.Client(**credentials)
 
 if verbose:
     elapsed = timeit.default_timer() - start_time
-    print ("[@ %d] Authentication successful" % elapsed)
+    print ("[@ %f] Authentication successful" % elapsed)
 
 try:
     body = {'network': {'name': network_name,
