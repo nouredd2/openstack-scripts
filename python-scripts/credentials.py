@@ -20,7 +20,7 @@ def get_credentials():
     d['username'] = os.environ.get('OS_USERNAME')
     d['password'] = os.environ.get('OS_PASSWORD')
     d['auth_url'] = os.environ.get('OS_AUTH_URL')
-    d['tenant_name'] = os.environ.get('OS_TENANT_NAME')
+    d['project_name'] = os.environ.get('OS_PROJECT_NAME')
     return d
 
 def get_nova_credentials():
