@@ -17,10 +17,10 @@ def get_credentials():
     @return Returns a dictionary of variables
     """
     d = {}
-    d['username'] = os.environ['OS_USERNAME']
-    d['password'] = os.environ['OS_PASSWORD']
-    d['auth_url'] = os.environ['OS_AUTH_URL']
-    d['tenant_name'] = os.environ['OS_TENANT_NAME']
+    d['username'] = os.environ.get('OS_USERNAME')
+    d['password'] = os.environ.get('OS_PASSWORD')
+    d['auth_url'] = os.environ.get('OS_AUTH_URL')
+    d['tenant_name'] = os.environ.get('OS_TENANT_NAME')
     return d
 
 def get_nova_credentials():
@@ -31,8 +31,8 @@ def get_nova_credentials():
     @return Returns a dictionary of variables
     """
     d = {}
-    d['username'] = os.environ['OS_USERNAME']
-    d['api_key'] = os.environ['OS_PASSWORD']
-    d['auth_url'] = os.environ['OS_AUTH_URL']
-    d['project_id'] = os.environ['OS_TENANT_NAME']
+    d['username'] = os.environ.get('OS_USERNAME')
+    d['api_key'] = os.environ.get('OS_PASSWORD')
+    d['auth_url'] = os.environ.get('OS_AUTH_URL')
+    d['project_id'] = os.environ.get('OS_TENANT_NAME')
     return d
