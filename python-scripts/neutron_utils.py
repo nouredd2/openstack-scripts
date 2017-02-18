@@ -5,7 +5,7 @@
 # and not the file overcloudrc.v3
 
 from neutronclient.v2_0 import client
-from credentials import credentials
+from credentials import get_credentials
 from utils import print_completion_time, exit_with_error_message
 import timeit
 
