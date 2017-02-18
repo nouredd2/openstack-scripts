@@ -22,7 +22,7 @@ verbose = args.verbose
 start_time = timeit.default_timer()
 
 # get the neutron client
-neutron = authenticate_neutron()
+neutron = authenticate_neutron(start_time, verbose)
 
 # get the neutron credentials
 #credentials = get_credentials()
