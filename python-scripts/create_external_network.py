@@ -4,9 +4,9 @@
 # client and thus needs the file overcloudrc 
 # and not the file overcloudrc.v3
 
-
 import neutron_utils
 import argparse
+import timeit
 
 # start by obtaining the arguments
 parser = argparse.ArgumentParser(description="Create an external network to which \
