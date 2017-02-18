@@ -5,11 +5,8 @@
 # and not the file overcloudrc.v3
 
 
-from neutronclient.v2_0 import client 
-from credentials import get_credentials
-from utils import print_completion_time, exit_with_error_message
+import neutron_utils
 import argparse
-import timeit
 
 # start by obtaining the arguments
 parser = argparse.ArgumentParser(description="Create an external network to which \
@@ -24,25 +21,28 @@ verbose = args.verbose
 
 start_time = timeit.default_timer()
 
+# get the neutron client
+neutron = authenticate_neutron()
+
 # get the neutron credentials
-credentials = get_credentials()
+#credentials = get_credentials()
 
-# check for missing credentials
-for k, v in credentials.items():
-    if (v == None or v == " "):
-        msg = "Invalid credential value for key %s" % k
-        print_completion_time(start_time)
-        exit_with_error_message(msg)
-
-if verbose:
-    elapsed = timeit.default_timer() - start_time
-    print ("[@ %f] Authenticating to neutron client" % elapsed)
-
-neutron = client.Client(**credentials)
-
-if verbose:
-    elapsed = timeit.default_timer() - start_time
-    print ("[@ %f] Authentication successful" % elapsed)
+## check for missing credentials
+#for k, v in credentials.items():
+#    if (v == None or v == " "):
+#        msg = "Invalid credential value for key %s" % k
+#        print_completion_time(start_time)
+#        exit_with_error_message(msg)
+#
+#if verbose:
+#    elapsed = timeit.default_timer() - start_time
+#    print ("[@ %f] Authenticating to neutron client" % elapsed)
+#
+#neutron = client.Client(**credentials)
+#
+#if verbose:
+#    elapsed = timeit.default_timer() - start_time
+#    print ("[@ %f] Authentication successful" % elapsed)
 
 try:
     body = {'network': {'name': network_name,
