@@ -5,6 +5,7 @@
 # and not the file overcloudrc.v3
 
 from neutron_utils import authenticate_neutron
+from utils import print_completion_time
 import argparse
 import timeit
 
