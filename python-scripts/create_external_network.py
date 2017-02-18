@@ -4,7 +4,7 @@
 # client and thus needs the file overcloudrc 
 # and not the file overcloudrc.v3
 
-import neutron_utils
+from neutron_utils import authenticate_neutron
 import argparse
 import timeit
 
