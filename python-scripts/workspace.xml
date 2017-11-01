@@ -1,0 +1,23 @@
+﻿<Experiment>
+	<workstation name="workstation1" type="host" replicate="50">
+		<os>Ubuntu 17.04</os>
+		<flavor>flavor</flavor> 
+	</workstation>
+
+	<workstation name='w2' type="host" replicate="50">
+		<os>Ubuntu 16.04</os> <!--overrides default 'host'!-->
+		<flavor>flavor1</flavor> 
+	</workstation>
+
+	<workstation name='w3' type="IDS" replicate="30">
+	</workstation>
+
+	<workstation name="name1" type="mailserver">
+	</workstation>
+
+	<workstation name='w2' type="pcap">
+	</workstation>
+	
+</Experiment>
+
+
